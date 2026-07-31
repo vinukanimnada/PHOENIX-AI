@@ -1,9 +1,9 @@
 # PHOENIX AI
 
-Free AI text-analysis + image-generation web app. No server, no cost — runs entirely in the browser.
+Free general-purpose AI chatbot — chat with it like Claude/ChatGPT, plus an image generation mode. No server, no cost — runs entirely in the browser.
 
 ## What it uses
-- **Text analysis:** Google Gemini API (free tier — get a key at https://aistudio.google.com)
+- **Chat:** Google Gemini API (free tier — get a key at https://aistudio.google.com) — keeps full conversation history for multi-turn chat
 - **Image generation:** Pollinations.ai (completely free, no key needed)
 - **Hosting:** GitHub Pages (free)
 
@@ -17,8 +17,9 @@ Free AI text-analysis + image-generation web app. No server, no cost — runs en
 
 ## Using the app
 1. Open the live URL.
-2. Click **"API settings"** and paste your free Gemini API key (only needed for the text-analysis tab — image generation works with no key).
-3. Switch between **Analyze Text** and **Generate Image** tabs.
+2. Click **"API key"** in the header and paste your free Gemini API key (only needed for Chat mode — Image mode works with no key).
+3. Type a message and hit **Send**, or press Enter. Use **Clear chat** to start a new conversation.
+4. Switch to **🎨 Image** mode to generate pictures instead of chatting.
 
 ## Notes
 - The API key is kept only in browser memory for that tab — it clears on refresh, nothing is stored or sent anywhere except directly to Google's API.
