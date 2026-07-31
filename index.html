@@ -30,11 +30,7 @@
     overflow: hidden;
   }
 
-  body {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
+  body { display: flex; flex-direction: column; position: relative; }
 
   body::before {
     content: '';
@@ -84,8 +80,6 @@
     color: transparent;
   }
 
-  .header-actions { display: flex; gap: 10px; align-items: center; }
-
   .icon-btn {
     background: var(--bg-panel);
     border: 1px solid var(--border);
@@ -100,28 +94,14 @@
   }
   .icon-btn:hover { border-color: var(--neon); color: var(--neon); }
 
-  #chat-scroll {
-    position: relative;
-    z-index: 1;
-    flex: 1;
-    overflow-y: auto;
-    padding: 24px;
-  }
-
+  #chat-scroll { position: relative; z-index: 1; flex: 1; overflow-y: auto; padding: 24px; }
   .chat-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
 
-  .empty-hero {
-    text-align: center;
-    padding: 80px 20px;
-    color: var(--muted);
-  }
+  .empty-hero { text-align: center; padding: 80px 20px; color: var(--muted); }
   .empty-hero .glyph { width: 56px; height: 56px; margin: 0 auto 20px; }
   .empty-hero h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
-    letter-spacing: 2px;
-    color: var(--text);
-    margin-bottom: 8px;
+    font-size: 20px; letter-spacing: 2px; color: var(--text); margin-bottom: 8px;
   }
   .empty-hero p { font-size: 14px; }
 
@@ -138,16 +118,11 @@
   .msg.user .avatar { background: var(--bg-panel); color: var(--muted); border: 1px solid var(--border); }
 
   .bubble {
-    padding: 13px 16px;
-    border-radius: 12px;
-    font-size: 14.5px;
-    line-height: 1.65;
-    white-space: pre-wrap;
-    max-width: 620px;
+    padding: 13px 16px; border-radius: 12px; font-size: 14.5px;
+    line-height: 1.65; white-space: pre-wrap; max-width: 620px;
   }
   .msg.ai .bubble { background: var(--bg-bubble-ai); border: 1px solid var(--border); border-top-left-radius: 3px; }
   .msg.user .bubble { background: var(--bg-bubble-user); border: 1px solid #133a5c; border-top-right-radius: 3px; }
-
   .bubble img { max-width: 100%; border-radius: 8px; margin-top: 8px; display: block; }
 
   .thinking { display: flex; gap: 5px; padding: 4px 0; }
@@ -160,120 +135,42 @@
   @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
 
   .input-bar {
-    position: relative;
-    z-index: 2;
-    border-top: 1px solid var(--border);
-    background: rgba(5,8,16,0.9);
-    backdrop-filter: blur(8px);
-    padding: 16px 24px 20px;
+    position: relative; z-index: 2; border-top: 1px solid var(--border);
+    background: rgba(5,8,16,0.9); backdrop-filter: blur(8px); padding: 16px 24px 20px;
   }
-
   .input-inner { max-width: 780px; margin: 0 auto; }
-
   .mode-row { display: flex; gap: 8px; margin-bottom: 10px; }
 
   .mode-chip {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.4px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid var(--border);
-    background: var(--bg-panel);
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.2s ease;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.4px;
+    padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border);
+    background: var(--bg-panel); color: var(--muted); cursor: pointer; transition: all 0.2s ease;
   }
   .mode-chip.active { border-color: var(--neon); color: var(--neon); background: var(--neon-dim); }
 
   .input-row {
-    display: flex;
-    gap: 10px;
-    align-items: flex-end;
-    background: var(--bg-panel);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 10px 10px 10px 16px;
-    transition: border-color 0.2s ease;
+    display: flex; gap: 10px; align-items: flex-end;
+    background: var(--bg-panel); border: 1px solid var(--border); border-radius: 14px;
+    padding: 10px 10px 10px 16px; transition: border-color 0.2s ease;
   }
   .input-row:focus-within { border-color: var(--neon); }
 
   #user-input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--text);
-    font-family: 'Inter', sans-serif;
-    font-size: 14.5px;
-    resize: none;
-    max-height: 160px;
-    line-height: 1.5;
-    padding: 6px 0;
+    flex: 1; background: transparent; border: none; outline: none;
+    color: var(--text); font-family: 'Inter', sans-serif; font-size: 14.5px;
+    resize: none; max-height: 160px; line-height: 1.5; padding: 6px 0;
   }
   #user-input::placeholder { color: var(--muted); }
 
   button.send {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 1px;
-    background: linear-gradient(90deg, var(--electric), var(--neon));
-    color: #001018;
-    border: none;
-    border-radius: 9px;
-    padding: 12px 18px;
-    cursor: pointer;
-    flex-shrink: 0;
+    font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px;
+    background: linear-gradient(90deg, var(--electric), var(--neon)); color: #001018;
+    border: none; border-radius: 9px; padding: 12px 18px; cursor: pointer; flex-shrink: 0;
     transition: filter 0.2s ease, transform 0.1s ease;
   }
   button.send:hover { filter: brightness(1.15); }
   button.send:active { transform: scale(0.97); }
   button.send:disabled { opacity: 0.4; cursor: not-allowed; }
-
-  .modal-overlay {
-    display: none;
-    position: fixed; inset: 0; z-index: 10;
-    background: rgba(2,4,10,0.7);
-    align-items: center; justify-content: center;
-  }
-  .modal-overlay.show { display: flex; }
-
-  .modal {
-    background: var(--bg-panel);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 24px;
-    width: 90%;
-    max-width: 420px;
-  }
-  .modal h3 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 15px;
-    letter-spacing: 1px;
-    color: var(--neon);
-    margin-bottom: 16px;
-  }
-  .modal label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; letter-spacing: 0.5px; }
-  .modal input {
-    width: 100%;
-    background: #050a16;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: var(--text);
-    font-size: 14px;
-    padding: 11px 13px;
-    margin-bottom: 6px;
-  }
-  .modal input:focus { outline: none; border-color: var(--neon); }
-  .modal small { display: block; color: var(--muted); line-height: 1.5; margin-bottom: 18px; }
-  .modal small a { color: var(--neon); }
-  .modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
-  .modal-actions button {
-    font-size: 13px; font-weight: 600; padding: 9px 16px; border-radius: 8px; cursor: pointer; border: none;
-  }
-  .btn-cancel { background: transparent; color: var(--muted); border: 1px solid var(--border) !important; }
-  .btn-save { background: linear-gradient(90deg, var(--electric), var(--neon)); color: #001018; }
 
   @media (prefers-reduced-motion: reduce) {
     .glyph.igniting svg { animation: none; }
@@ -294,10 +191,7 @@
     </div>
     <h1>PHOENIX AI</h1>
   </div>
-  <div class="header-actions">
-    <button class="icon-btn" id="clear-btn">Clear chat</button>
-    <button class="icon-btn" id="settings-btn">API key</button>
-  </div>
+  <button class="icon-btn" id="clear-btn">Clear chat</button>
 </header>
 
 <div id="chat-scroll">
@@ -329,21 +223,7 @@
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-overlay">
-  <div class="modal">
-    <h3>GEMINI API KEY</h3>
-    <label for="api-key">Free key from Google AI Studio</label>
-    <input type="password" id="api-key" placeholder="Paste your API key">
-    <small>Kept only in this tab's memory — cleared on refresh. Get a free key at <a href="https://aistudio.google.com" target="_blank">aistudio.google.com</a></small>
-    <div class="modal-actions">
-      <button class="btn-cancel" id="modal-cancel">Cancel</button>
-      <button class="btn-save" id="modal-save">Save</button>
-    </div>
-  </div>
-</div>
-
 <script>
-  let apiKey = '';
   let currentMode = 'chat';
   let history = [];
 
@@ -374,14 +254,6 @@
     }
   });
 
-  const overlay = document.getElementById('modal-overlay');
-  document.getElementById('settings-btn').addEventListener('click', () => overlay.classList.add('show'));
-  document.getElementById('modal-cancel').addEventListener('click', () => overlay.classList.remove('show'));
-  document.getElementById('modal-save').addEventListener('click', () => {
-    apiKey = document.getElementById('api-key').value.trim();
-    overlay.classList.remove('show');
-  });
-
   document.getElementById('clear-btn').addEventListener('click', () => {
     history = [];
     chatInner.innerHTML = '';
@@ -393,9 +265,7 @@
     sendBtn.disabled = isLoading;
   }
 
-  function scrollToBottom() {
-    chatScroll.scrollTop = chatScroll.scrollHeight;
-  }
+  function scrollToBottom() { chatScroll.scrollTop = chatScroll.scrollHeight; }
 
   function addMessage(role, contentHTML) {
     if (emptyHero.parentNode) emptyHero.remove();
@@ -410,18 +280,19 @@
     return msg.querySelector('.bubble');
   }
 
+  // Chat goes through our own hidden backend at /api/chat — no key in the browser at all.
   async function sendChat(text) {
     history.push({ role: 'user', parts: [{ text }] });
     setLoading(true);
     const thinkingBubble = addMessage('ai', '<div class="thinking"><span></span><span></span><span></span></div>');
     try {
-      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
+      const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ contents: history })
       });
       const data = await res.json();
-      if (data.error) throw new Error(data.error.message);
+      if (data.error) throw new Error(data.error);
       const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response received.';
       history.push({ role: 'model', parts: [{ text: reply }] });
       thinkingBubble.textContent = reply;
@@ -455,21 +326,10 @@
   sendBtn.addEventListener('click', () => {
     const text = input.value.trim();
     if (!text) return;
-
-    if (currentMode === 'chat' && !apiKey) {
-      overlay.classList.add('show');
-      return;
-    }
-
     addMessage('user', text.replace(/</g, '&lt;'));
     input.value = '';
     input.style.height = 'auto';
-
-    if (currentMode === 'chat') {
-      sendChat(text);
-    } else {
-      sendImage(text);
-    }
+    currentMode === 'chat' ? sendChat(text) : sendImage(text);
   });
 </script>
 </body>
